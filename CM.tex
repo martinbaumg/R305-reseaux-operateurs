@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{minted}
+\usepackage{array,multirow,makecell}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\setcellgapes{1pt}
+\makegapedcells
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\chead{}
+\rfoot{\thepage}
+\lfoot{Martin Baumgaertner}
+\cfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\listingscaption}{Code}
+\renewcommand{\listoflistingscaption}{Table des codes}
+% \usepackage{mathpazo} --> Police à utiliser lors de rapports plus sérieux
+
+\begin{document}
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+	\center 
+	\textsc{\LARGE iut de colmar}\\[1.5cm] 
+	\textsc{\Large R305}\\[0.5cm] 
+	\textsc{\large Année 2022-23}\\[0.5cm]
+	\HRule\\[0.75cm]
+	{\huge\bfseries Réseaux opérateurs}\\[0.4cm]
+	\HRule\\[1.5cm]
+	\textsc{\large martin baumgaertner}\\[0.5cm] 
+
+	\vfill\vfill\vfill
+	{\large\today} 
+	\vfill
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\section{CM 1 - 2 septembre 2022}
+\subsection{Introduction}
+    \begin{itemize}
+        \item La couche d’accès fourni un moyen de connecter des périphériques au réseau. 
+        \item La couche de distribution gère le flux du traffic réseau à l’aide de 
+        stratégie politiques de distribution.
+        \item la couche coeur consitutye lé réseau fédérateur hait débit de 
+        l’inter-réseau.\\
+    \end{itemize}
+Il y a deux catégories de matériel utilisé pour interconnecter :
+
+IGP : Protocoles de routage utilisés à l'intérieur d'un système autonome
+
+EGP : Protocole de riytage utilisé pour échanger des informations de routage
+entre différents système autonomes.\\
+
+BGP à deux variantes :
+
+    \begin{itemize}
+        \item External BGP (eBGP) : utilisé enrre des AS différents 
+        (distance administrative : 20)
+        \item Internal BGP (iBGP) : utilisé pour interconnecter des AS
+        (distance administrative : 200)
+    \end{itemize}
+  
+\subsection{Pourquoi utiliser BGP}
+    Un IGP n'est pas suffisant car si un routeur doit échanger des informations
+    sur toutes les routes du monde, donc à l'aide du BGP, il est conçu pour
+    créer des sessions de routage entre les différents routeurs.\\
+
+    Si par exemple un client possède plusieurs serveurs et qu'il veut mettre 
+    tous ses services sur internet, qu'il a donc la même adresse IP, on va 
+    donc faire du port forwarding\\
+
+    Si maintenant, on veut assurer de la redondance, et qu'on veut un lien
+    primaire et autre seconfaire avec un équilibrage de charge 50/50, on aura
+    toujours pas besoin de BGP. \\
+    
+    Le cas d'usage principal de BGP, c'est d'interconnecter, pour avoir une meilleure
+    redondance. 
+    BGP permet de faire transiter les routes publiques vers les AS.
+    \newpage
+
+    \subsection{BGP - concetps de base}
+    \begin{itemize}
+        \item BGP est un protocole de routage à vecteur de chemin
+        \item Fait les décisions selon les politiques de routage
+        \item N'indique pas les détails internes des AS
+        \item Ne représente qu'un arbre des AS
+        
+    \end{itemize}
+
+
+
+\end{document}

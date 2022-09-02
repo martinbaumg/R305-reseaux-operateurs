@@ -1,0 +1,5 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}CM 1 - 2 septembre 2022}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduction}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Pourquoi utiliser BGP}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}BGP - concetps de base}{3}{subsection.1.3}%
