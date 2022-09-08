@@ -28,13 +28,13 @@
 \begin{titlepage}
 	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
 	\center 
-	\textsc{\LARGE iut de colmar}\\[1.5cm] 
+	\textsc{\LARGE iut de colmar}\\[6.5cm] 
 	\textsc{\Large R305}\\[0.5cm] 
 	\textsc{\large Année 2022-23}\\[0.5cm]
 	\HRule\\[0.75cm]
 	{\huge\bfseries Réseaux opérateurs}\\[0.4cm]
 	\HRule\\[1.5cm]
-	\textsc{\large martin baumgaertner}\\[0.5cm] 
+	\textsc{\large martin baumgaertner}\\[6.5cm] 
 
 	\vfill\vfill\vfill
 	{\large\today} 
@@ -94,7 +94,142 @@ BGP à deux variantes :
         \item Ne représente qu'un arbre des AS
         
     \end{itemize}
+\newpage  
+\section{TD 1 - 7 septembre 2022}
+\subsection{Exercice 1}
+    \subsubsection{Question 1}
+    L'IGP est utilisé pour l'intérieur d'un système tandis que EGP est utilisé
+    pour échanger des informations entre différents systèmes autonomes. 
+    La capacité de traitement est aussi différente, BGP a une plus grande capacité de 
+    traitement. 
+    
+    \subsubsection{Question 2}
+    \texttt{Path Vector} signifie que c'est un protocole de routage à vecteur de 
+    chemin qui conserve les informations de chemin qui sont mises à jour dynamiquement. 
 
+    \subsubsection{Question 3}
+    Le numéro de port utilisé pour BGP est le port 179. Le mode de connexion utilisé
+    pour ses sessions est TCP. 
+
+    \subsubsection{Question 4}
+    La détection de boucle se fait grâce aux numéros d'AS, un système autonome peut
+    détecter un chemin qui passe deux fois par le même AS. 
+
+    \subsubsection{Question 5}
+    La version actuelle de BGP est \texttt{BGP4}.
+
+    \subsubsection{Question 6}
+    La stratégie de base appliquée par les routeurs BGP pour choisir le chemin
+    vers la destination est la stratégie de distance administrative.
+
+    \subsubsection{Question 7}
+    Un peering est une paire de routeurs qui établissent une session BGP avec
+    connexion TCP. 
+
+    \subsubsection{Question 8}
+    Faux. 
+
+    \subsubsection{Question 9}
+    Le rôle des attributs suivants : 
+    \begin{itemize}
+        \item \texttt{Local pref} : permet de définir par quel routeur on veut recevoir les données et par quel routeur on veut sortir les données
+        \item \texttt{MED} : permet de définir la priorité du chemin de réception. 
+    \end{itemize}
+
+    \subsubsection{Question 10}
+    Le deux variantes de BGP sont :
+    \begin{itemize}
+        \item \texttt{eBGP} : utilisé entre des AS différents
+        \item \texttt{iBGP} : utilisé pour interconnecter des AS
+    \end{itemize}
+
+    \subsubsection{Question 11}
+    Nous l'utiliserons si on veut contrôler la réparition du flux. Mais aussi
+    pour l'interconnexion de systèmes autonomes. 
+
+    \subsubsection{Question 12}
+    Non pas forcément, le partage peut être partiel au total. 
+
+    \subsubsection{Question 13}
+    Il existe actuellement plus de 900 000 préfixes réseaux. 
+
+\subsection{Exercice 2}
+    \subsubsection{Question 1}
+    R2 : \\ 
+    C.192.16.1.0/24\\
+    C.11.1.2.0/24\\
+
+    R3 : \\
+    C.12.1.0.0/24\\
+
+    R5 : \\
+    C.128.213.11.0/24\\
+    C.212.1.1.0/24\\
+    R.172.16.0.0/24\\
+    R.10.0.0.0/24\\
+
+    B3 : \\
+    C.1.1.1.0/24\\
+    C.128.213.11.0/24\\
+    R.212.1.1.0/24\\
+    R.10.0.0.0/24\\
+    R.172.16.0.0/24\\
+
+\newpage
+
+\section{CM 2 - 8 septembre 2022}
+\subsection{MPLS}
+    \subsubsection{Définition}
+    En language informatique et dans le domaine des télécommunications, 
+    le MPLS (MultiProtocol Label Switching) est un mécanisme de transport 
+    des données en réseau extrêmement modulaire, censé répondre aux difficultés 
+    posées par les réseaux actuels qui transmettent des paquets IP (Internet 
+    Protocol). Il s’agit en réalité d’un type d’architecture réseau étudié 
+    par l’IETF. Il est censé étendre les fonctionnalités des infrastructures 
+    IP actuelles et en résoudre les problèmes. En effet, la méthode de routage 
+    employée aujourd’hui de type « unicast par saut » ( de l’émetteur vers le 
+    récepteur), manque de flexibilité du fait de certaines restrictions 
+    inhérentes à sa structure.\\
+
+    Dans cette optique, le MPLS doit jouer un rôle important dans le routage, 
+    la communication et le transfert de paquets au travers d’une infrastructure 
+    réseau innovante. Elle devra prendre en compte à la fois les besoins de 
+    service et les utilisateurs du réseau.\\
+
+    Chaque entité n’aura ainsi besoin que d’une connexion vers un fournisseur 
+    de service unique MPLS. Chaque noeud MPLS fonctionne aussi comme un routeur 
+    IP, qui utilise des protocoles de routage IP afin d’échanger avec les 
+    routeurs voisins.\\
+
+    \subsubsection{Explication}
+    L'intérêt de MPLS est de pouvoir faire du multiplexage de flux. Il vient comme
+    base pour des services avancés. On en a besoin par exemple\\
+
+    MPLS agit comme un en-tête sur une trame. MPLS est un protocole on peut 
+    qualifier de 2.5. Le fournisseur d'accès possèdent des routeurs à la frontière
+    de son système et à l'intérerieur de son réseau. 
+\newpage
+
+\subsection{LDP}
+    \subsubsection{Définition}
+    Le protocole LDP (Label Distribution Protocol) est un protocole permettant de 
+    distribuer des étiquettes dans des applications non conçues pour le trafic. Le 
+    LDP permet aux routeurs d’établir des chemins de commutation d’étiquettes (LSP) 
+    via un réseau en mappant les informations de routage de la couche réseau 
+    directement aux chemins commutés par couche de liaison de données.\\
+
+    \subsubsection{Explication}
+    Ces LSP peuvent avoir un point de terminaison à un voisin directement connecté 
+    (comparable au transfert IP saut par saut) ou à un nœud de sortie du réseau, 
+    ce qui permet de passer par tous les nœuds intermédiaires. Les LSP établies par 
+    LDP peuvent également passer par des LSP conçus pour le trafic créés par RSVP.\\
+
+    Le LDP associe une classe de transfert (FEC) à chaque LSP qu’il crée. Le FEC 
+    associé à une LSP spécifie quels paquets sont mappés à ce LSP. Les LSP sont 
+    étendus via un réseau car chaque routeur choisit le label annoncé par le 
+    saut suivant pour le FEC et l’ajoute au label qu’il présente à tous les 
+    autres routeurs. Ce processus forme un arbre de LSP qui converge vers le
+    routeur de sortie\\
 
 
 \end{document}
