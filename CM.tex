@@ -42,6 +42,7 @@
 \end{titlepage}
 \newpage
 \tableofcontents
+\listoflistings
 \newpage
 \section{CM 1 - 2 septembre 2022}
 \subsection{Introduction}
@@ -230,6 +231,78 @@ BGP à deux variantes :
     saut suivant pour le FEC et l’ajoute au label qu’il présente à tous les 
     autres routeurs. Ce processus forme un arbre de LSP qui converge vers le
     routeur de sortie\\
+
+
+\newpage
+\section{CM 3 - 8 septembre 2022 - M. Mura}
+\subsection{Modulation analogique FM}
+    \subsubsection{Récepteur homodyne}
+    Le démodulateur veut récuperer la station 101,4 MHz, toutes les autres 
+    stations sont donc considéré comme indésirable et d'après le schéma, une
+    station occupe 120 KHz de BP.
+
+
+    \subsubsection{Récepteur hétérodyne}
+    Le récepteur hétérodyne est un récepteur qui utilise un oscillateur local. 
+    Mais aussi c'est un récepteur conçu sur le principe du mélange de 
+    fréquences, ou hétérodynage, pour convertir le signal reçu en une 
+    fréquence intermédiaire plus basse qu'il est plus facile d'utiliser 
+    que la fréquence reçue en direct.
+
+
+    \subsubsection{Elimination de la fréquence image}
+
+
+\newpage
+\section{TD 2 - 12 septembre 2022}
+\subsection{Exerice 3}
+    \subsubsection{Question 1}
+    Voici les configurations des différents routeurs. 
+    \begin{listing}[H]
+        \caption{Configuration du routeur 1 - OSPF}
+        \label{lst:r1o}
+        \begin{minted}{bash}
+        router OSPF 1 
+        network 172.16.12.0 0.0.0.3
+        network 192.168.100.1 0.0.0.0
+        interface lo 0
+        ip add 192.168.100.1 255.255.255.255
+        \end{minted}
+    \end{listing}
+
+    \begin{listing}[H]
+        \caption{Configuration du routeur 1 - BGP}
+        \label{lst:r1b}
+        \begin{minted}{bash}
+        router BGP 100
+        neighbor 192.168.100.3 remote-as 100
+        \end{minted}
+    \end{listing}
+
+    \begin{listing}[H]
+        \caption{Configuration du routeur 2 - BGP}
+        \label{lst:r2b}
+        \begin{minted}{bash}
+        router BGP 100
+        neighbor 192.168.100.1 remote-as 100
+        neighbor 192.168.100.1 update-source loopback 0
+        neighbor 192.168.100.3 remote-as 100
+        neighbor 192.168.100.3 update-source loopback 0
+        \end{minted}
+    \end{listing}
+
+    \begin{listing}[H]
+        \caption{Configuration du routeur 3 - BGP}
+        \label{lst:r3b}
+        \begin{minted}{bash}
+        router BGP 100
+        neighbor 192.168.100.1 remote-as 100
+        neighbor 192.168.100.1 update-source lo 0
+        \end{minted}
+    \end{listing}
+
+
+
 
 
 \end{document}

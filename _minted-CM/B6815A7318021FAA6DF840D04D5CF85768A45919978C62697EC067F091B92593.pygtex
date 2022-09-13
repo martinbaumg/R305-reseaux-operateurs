@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        router BGP \PYG{l+m}{100}
+        neighbor \PYG{l+m}{192}.168.100.3 remote\PYGZhy{}as \PYG{l+m}{100}
+\end{Verbatim}
