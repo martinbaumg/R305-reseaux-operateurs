@@ -176,6 +176,52 @@ BGP à deux variantes :
     R.10.0.0.0/24\\
     R.172.16.0.0/24\\
 
+    \subsection{Exerice 3}
+    \subsubsection{Question 1}
+    Voici les configurations des différents routeurs. 
+    \begin{listing}[H]
+        \caption{Configuration du routeur 1 - OSPF}
+        \label{lst:r1o}
+        \begin{minted}{bash}
+        router OSPF 1 
+        network 172.16.12.0 0.0.0.3
+        network 192.168.100.1 0.0.0.0
+        interface lo 0
+        ip add 192.168.100.1 255.255.255.255
+        \end{minted}
+    \end{listing}
+
+    \begin{listing}[H]
+        \caption{Configuration du routeur 1 - BGP}
+        \label{lst:r1b}
+        \begin{minted}{bash}
+        router BGP 100
+        neighbor 192.168.100.3 remote-as 100
+        \end{minted}
+    \end{listing}
+
+    \begin{listing}[H]
+        \caption{Configuration du routeur 2 - BGP}
+        \label{lst:r2b}
+        \begin{minted}{bash}
+        router BGP 100
+        neighbor 192.168.100.1 remote-as 100
+        neighbor 192.168.100.1 update-source loopback 0
+        neighbor 192.168.100.3 remote-as 100
+        neighbor 192.168.100.3 update-source loopback 0
+        \end{minted}
+    \end{listing}
+
+    \begin{listing}[H]
+        \caption{Configuration du routeur 3 - BGP}
+        \label{lst:r3b}
+        \begin{minted}{bash}
+        router BGP 100
+        neighbor 192.168.100.1 remote-as 100
+        neighbor 192.168.100.1 update-source lo 0
+        \end{minted}
+    \end{listing}
+
 \newpage
 
 \section{CM 2 - 8 septembre 2022}
@@ -254,52 +300,35 @@ BGP à deux variantes :
 
 
 \newpage
-\section{TD 2 - 12 septembre 2022}
-\subsection{Exerice 3}
-    \subsubsection{Question 1}
-    Voici les configurations des différents routeurs. 
-    \begin{listing}[H]
-        \caption{Configuration du routeur 1 - OSPF}
-        \label{lst:r1o}
-        \begin{minted}{bash}
-        router OSPF 1 
-        network 172.16.12.0 0.0.0.3
-        network 192.168.100.1 0.0.0.0
-        interface lo 0
-        ip add 192.168.100.1 255.255.255.255
-        \end{minted}
-    \end{listing}
+\section{TD 2 - 13 septembre 2022}
+\subsection{Exercice 1}
+    \subsubsection{a)}
+    Les avantages de MPLS sont que désormais l'inrerêt de MPLS n'est plus la 
+    rapidité mais l'offre de services qu'il permet : MPLS-VPN, et le MPLS-TE, 
+    qui ne sont plus réalisables avec le routage IP classique.\\
 
-    \begin{listing}[H]
-        \caption{Configuration du routeur 1 - BGP}
-        \label{lst:r1b}
-        \begin{minted}{bash}
-        router BGP 100
-        neighbor 192.168.100.3 remote-as 100
-        \end{minted}
-    \end{listing}
+    \subsubsection{b)}
+    Il existe différents types de LER : 
+    \begin{itemize}
+        \item LER-PE : (Label Edge Router-Provider Edge) Il se trouve à la 
+        périphérie du réseau du FAI et il a un rôle important : il reçoit et 
+        ajoute aux paquets ou trames du client une étiquette MPLS et les 
+        transmet vers le cœur du réseau.\\
+        \item LER-CE : (Label Edge Router-Customer Edge) C’est l’équipement 
+        d’interconnexion entre le réseau du client et celui du FAI. Il peut 
+        être de L2 ou L3 et il n’est pas concerné par MPLS.\\
+        \item LER-P : (Label Edge Router-Provider) Il se trouve dans le cœur. 
+    \end{itemize}
 
-    \begin{listing}[H]
-        \caption{Configuration du routeur 2 - BGP}
-        \label{lst:r2b}
-        \begin{minted}{bash}
-        router BGP 100
-        neighbor 192.168.100.1 remote-as 100
-        neighbor 192.168.100.1 update-source loopback 0
-        neighbor 192.168.100.3 remote-as 100
-        neighbor 192.168.100.3 update-source loopback 0
-        \end{minted}
-    \end{listing}
+    \subsubsection{c)}
+    La principale fonctionnalité assurée par les LSR est d'être connecté aux 
+    PE et aux autres routeurs P. Il a pour rôle de commuter les paquets en 
+    fonction de leurs étiquettes. Appelé aussi un routeur de transit.
 
-    \begin{listing}[H]
-        \caption{Configuration du routeur 3 - BGP}
-        \label{lst:r3b}
-        \begin{minted}{bash}
-        router BGP 100
-        neighbor 192.168.100.1 remote-as 100
-        neighbor 192.168.100.1 update-source lo 0
-        \end{minted}
-    \end{listing}
+\subsection{Exercice 2}
+    
+
+
 
 
 

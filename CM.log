@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.15)  12 SEP 2022 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.15)  13 SEP 2022 08:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -526,16 +526,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-)
-\tf@toc=\write6
-\openout6 = `CM.toc'.
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 \listoflistings
-                     [1] (./CM.lol)
+l.38 ...rline {5.1}Exercice 1}{12}{subsection.5.1}
+                                                  % [1])
+\tf@toc=\write6
+\openout6 = `CM.toc'.
+
+ (./CM.lol)
 \tf@lol=\write7
 \openout7 = `CM.lol'.
 
@@ -593,48 +593,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--178
 
  []
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 184--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--204
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 216--221
-
- []
-
-
-Overfull \hbox (1.24815pt too wide) in paragraph at lines 223--227
-[]\T1/cmr/m/n/12 Ces LSP peuvent avoir un point de ter-mi-nai-son à un voi-sin di-rec-te-ment connecté
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--234
-
- []
-
-[9] [10]
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 262.
+[6]
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 183.
 \openout3 = `CM.pyg'.
 
  (./_minted-CM/default.pygstyle) (./_minted-CM/014ED7E9DDAC17B3E2650DC8F32D2B9968A45919978C62697EC067F091B92593.pygtex)
@@ -646,25 +606,80 @@ Package hyperref Info: bookmark level for unknown listing defaults to 0 on input
  (./_minted-CM/0D137B19D59C7AAD4DA8C27F3DC9425068A45919978C62697EC067F091B92593.pygtex)
 \openout3 = `CM.pyg'.
 
- (./_minted-CM/29781157F9A0F393CA9BE7D5B92992F568A45919978C62697EC067F091B92593.pygtex) [11] (./CM.aux)
+ (./_minted-CM/29781157F9A0F393CA9BE7D5B92992F568A45919978C62697EC067F091B92593.pygtex) [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 230--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--254
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 262--267
+
+ []
+
+
+Overfull \hbox (1.24815pt too wide) in paragraph at lines 269--273
+[]\T1/cmr/m/n/12 Ces LSP peuvent avoir un point de ter-mi-nai-son à un voi-sin di-rec-te-ment connecté
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--280
+
+ []
+
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--320
+
+ []
+
+[12] (./CM.aux)
 Package rerunfilecheck Info: File `CM.out' has not changed.
-(rerunfilecheck)             Checksum: F398B5AD1D52A7A0613350440D205F00;4974.
+(rerunfilecheck)             Checksum: 9D69561A46B76BA880C602F9F1C6FDCC;5439.
 runsystem(rm CM.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17459 strings out of 478268
- 296590 string characters out of 5846347
- 652048 words of memory out of 5000000
- 35372 multiletter control sequences out of 15000+600000
+ 17470 strings out of 478268
+ 296777 string characters out of 5846347
+ 653042 words of memory out of 5000000
+ 35377 multiletter control sequences out of 15000+600000
  481184 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,81p,362b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,81p,362b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on CM.pdf (12 pages, 183986 bytes).
+Output written on CM.pdf (13 pages, 186662 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 
