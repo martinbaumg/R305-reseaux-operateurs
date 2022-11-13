@@ -325,8 +325,26 @@ BGP à deux variantes :
     PE et aux autres routeurs P. Il a pour rôle de commuter les paquets en 
     fonction de leurs étiquettes. Appelé aussi un routeur de transit.
 
-\subsection{Exercice 2}
-    
+\newpage
+
+\section{TP 1 - 10 novembre 2022}
+\subsection{Configuration des routeurs}
+    \begin{verbatim}
+        R1>enable
+        R1#configure terminal
+        R1(config)#interface fastEthernet 0/0
+        R1(config-if)#ip address X.X.X.X Y.Y.Y.Y
+        R1(config-if)#no shutdown
+        R1(config-if)#exit
+    \end{verbatim}
+
+\subsection{Configuration du OSPF}
+    \begin{verbatim}
+        R6(config)#router ospf 1
+        R6(config-router)#network 10.0.0.0 0.0.0.255 area 0
+        R6(config-router)#router-id 6.6.6.6
+        R6(config-router)#network 6.6.6.6 0.0.0.0 area 0
+    \end{verbatim}
 
 
 

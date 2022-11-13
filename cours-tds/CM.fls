@@ -1,8 +1,8 @@
-PWD /Users/martinbaumgaertner/Documents/GitHub/R305-reseaux-operateurs
+PWD /Users/martinbaumgaertner/Documents/GitHub/R305-reseaux-operateurs/cours-tds
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/martinbaumgaertner/Documents/GitHub/R305-reseaux-operateurs/CM.tex
+INPUT /Users/martinbaumgaertner/Documents/GitHub/R305-reseaux-operateurs/cours-tds/CM.tex
 OUTPUT CM.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
