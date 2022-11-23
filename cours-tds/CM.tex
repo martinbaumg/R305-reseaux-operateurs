@@ -2,6 +2,7 @@
 \usepackage[francais]{babel}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{bigfoot}
 \usepackage[T1]{fontenc}
 \usepackage{listings}
 \usepackage{geometry}
@@ -361,6 +362,7 @@ La commande permettant de vérifier les interfaces où MPLS est activé est :
         R1#show mpls interfaces
     \end{verbatim}
 
+
 \subsection{Questions du TP 2}
 La commmande \texttt{show mpls ldp discovery} permet de voir les voisins LDP. 
 Lorsque l'on désactive l'interface lo0 du routeur, nous constatons qu'en faisant
@@ -396,6 +398,30 @@ qu'un label est utilisé car j'obtiens en retour :
 \end{verbatim}
 
 
+\newpage
+\subsection{Configuration du VRF}
+\begin{verbatim}
+    vrf definition Client1
+        rd 100:1
+        route-target export 100:1
+        route-target import 100:1
+        !
+        address-family ipv4
+        exit-address-family
+    !
+    vrf definition Client2
+        rd 100:2
+        route-target export 100:2
+        route-target import 100:2
+        !
+        address-family ipv4
+        exit-address-family
+    !
+\end{verbatim}
+On utilise ici \texttt{vrf definition} pour définir le nom du VRF. 
+Ensuite, pour \texttt{rd}, \texttt{100} correspond au numéro d'AS et \texttt{1}
+correspond au numéro de client que l'on veut utiliser. On réitère la même 
+chose pour le deuxième client.
 
 
 
