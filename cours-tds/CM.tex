@@ -327,7 +327,7 @@ BGP à deux variantes :
 
 \newpage
 
-\section{TP 1 - 10 novembre 2022}
+\section{TP 1/2/3 - 10/17/23 novembre 2022}
 \subsection{Configuration des routeurs}
     \begin{verbatim}
         R1>enable
@@ -340,11 +340,60 @@ BGP à deux variantes :
 
 \subsection{Configuration du OSPF}
     \begin{verbatim}
-        R6(config)#router ospf 1
+        R6(config)#router ospf 1 (mettre le même numéro sur tous les routeurs)
         R6(config-router)#network 10.0.0.0 0.0.0.255 area 0
         R6(config-router)#router-id 6.6.6.6
         R6(config-router)#network 6.6.6.6 0.0.0.0 area 0
     \end{verbatim}
+
+
+\subsection{Configuration du MPLS}
+Pour activer le MPLS, il suffit de faire cette commande en choisissant les 
+interfaces concercnés par le MMPLS :
+    \begin{verbatim}
+        R1(config)#mpls ip
+        R1(config)#interface ethernet 0/0
+        R1(config-if)#mpls ip
+    \end{verbatim}
+
+La commande permettant de vérifier les interfaces où MPLS est activé est :
+    \begin{verbatim}
+        R1#show mpls interfaces
+    \end{verbatim}
+
+\subsection{Questions du TP 2}
+La commmande \texttt{show mpls ldp discovery} permet de voir les voisins LDP. 
+Lorsque l'on désactive l'interface lo0 du routeur, nous constatons qu'en faisant
+de nouveau la même commande qu'avant nous avons. 
+
+\newpage
+
+\subsection{Questions du TP 3}
+La commande permettant de voir les voisins LDP d'un routeur est :
+    \begin{verbatim}
+        R1#show mpls ldp neighbor
+    \end{verbatim}
+
+La commande qui permet de voir les labels que chaque routeur génère pour 
+les préfixes qu’il connait est : 
+    \begin{verbatim}
+        R1#show mpls ldp binding
+    \end{verbatim}
+Nous obtenons du coup toutes les adresses de loopback et leurs labels.
+Nous avons aussi les adresses de proximité et leurs labels.
+
+
+
+Lors que je fais \texttt{traceroute} \textit{IP de destination} on voit bien
+qu'un label est utilisé car j'obtiens en retour : 
+\begin{verbatim}
+    R1#traceroute 3.3.3.3
+    type escape sequence to abort.
+    Tracing the route to 3.3.3.3
+    VRF info: (vrf in name/id, vrf out name/id)
+    1 10.10.10.2 [MPLS: Label 20 Exp 0] 1 msec 0 msec 0 msec
+    2 10.10.10.1 1 msec 1 msec *
+\end{verbatim}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.15)  10 NOV 2022 14:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.15)  23 NOV 2022 10:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -661,25 +661,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--320
 
  []
 
-[12] [13] (./CM.aux)
+[12]
+Overfull \hbox (63.27873pt too wide) in paragraph at lines 347--347
+[]        \T1/cmtt/m/n/12 R6(config)#router ospf 1 (mettre le même numéro sur tous les routeurs)[] 
+ []
+
+[13] [14] (./CM.aux)
 Package rerunfilecheck Info: File `CM.out' has not changed.
-(rerunfilecheck)             Checksum: 07260CAA59E8A53BCBE20901A7632B00;5865.
+(rerunfilecheck)             Checksum: EA9FF1EE372969695BE9853CE537F2E4;6388.
 runsystem(rm CM.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17475 strings out of 478268
- 296864 string characters out of 5846347
+ 17484 strings out of 478268
+ 296983 string characters out of 5846347
  653045 words of memory out of 5000000
- 35379 multiletter control sequences out of 15000+600000
- 481184 words of font info for 50 fonts, out of 8000000 for 9000
+ 35383 multiletter control sequences out of 15000+600000
+ 481868 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,81p,372b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on CM.pdf (14 pages, 191215 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on CM.pdf (15 pages, 215891 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
- 345 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 369 words of extra memory for PDF output out of 10000 (max. 10000000)
 
