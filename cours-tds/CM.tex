@@ -362,6 +362,14 @@ La commande permettant de vérifier les interfaces où MPLS est activé est :
         R1#show mpls interfaces
     \end{verbatim}
 
+\subsection{Configuration du BGP}
+    \begin{verbatim}
+        R1(config)#router bgp N°AS
+        R1(config-router)#neighbor IP-voisin remote-as N°AS-voisin
+        R1(config-router)#network X.X.X.X Y.Y.Y.Y 
+    \end{verbatim}
+Où X.X.X.X est l'adresse du réseau à partager et Y.Y.Y.Y est le masque de sous-réseau.
+(Ne pas oublier de faire la même opération sur le routeur voisin)
 
 
 
